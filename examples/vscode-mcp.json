@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    { "type": "promptString", "id": "mysql-mcp-token", "description": "MySQL MCP bearer token", "password": true }
+  ],
+  "servers": {
+    "mysql": {
+      "type": "http",
+      "url": "http://localhost:3000/mcp",
+      "headers": { "Authorization": "Bearer ${input:mysql-mcp-token}" }
+    }
+  }
+}
